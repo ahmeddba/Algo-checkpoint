@@ -1,0 +1,18 @@
+Algorithm nbr_char
+VAR
+counter:integer:=1;
+i:integer;
+user_input:string;
+BEGIN
+REPEAT
+    write('Donner une phrase');
+    read('user_input');
+UNTIL (length(user_input) <> 0 AND user_input[0] <> " ")
+
+FOR i FROM 0 TO length(user_input)-1 STEP step  DO
+IF (user_input[i] := " ") THEN
+    counter := counter+1;
+END_IF
+END_FOR
+write("Le nombre des mots dans votre phrase est: "& counter );
+END
